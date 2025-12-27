@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { Fragment, useState } from 'react'
 // Styles
 import './App.css'
 
@@ -9,6 +9,7 @@ import ListRender from './components/ListRender'
 import ConditionalRender from './components/ConditionalRender'
 import ShowUserName from './components/ShowUserName'
 import CarDetails from './components/CarDetails'
+import Fragments from './components/Fragments'
 
 
 function App() {
@@ -46,6 +47,8 @@ function App() {
       {cars.map((car) => (
         <CarDetails brand={car.brand} km={car.km} color={car.color} newCar={car.newCar} />
       ))}
+      {/* Fragments */}
+      <Fragments propFragment="teste"/>
     </>
   )
 }
